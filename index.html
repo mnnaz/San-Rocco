@@ -166,55 +166,55 @@
   </div>
 </section>
 <!-- Data Preparation Section -->
-<section style="padding: 3rem 2rem; font-family: 'Georgia', serif; background-color: #fff; color: #333; max-width: 1000px; margin: 0 auto;">
-  <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; color: #444;">Data Preparation</h2>
-  <p style="font-size: 1.1rem; line-height: 1.7; max-width: 700px; margin-bottom: 2rem;">
-    This project uses publicly available full-text transcriptions of Agatha Christie’s short story collections: Hercule Poirot: The Complete Short Stories and Miss Marple: The Complete Short Stories, sourced from the Internet Archive.
+<section style="padding: 4rem 2rem; font-family: 'Georgia', serif; background-color: #fafafa; color: #333; max-width: 1000px; margin: 0 auto; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+  <h2 style="font-size: 2.6rem; margin-bottom: 1.8rem; color: #2c3e50; font-weight: 700; text-align: center; letter-spacing: 1px;">
+    Data Preparation
+  </h2>
+
+  <p style="font-size: 1.15rem; line-height: 1.8; max-width: 720px; margin: 0 auto 3rem auto; color: #444; text-align: center;">
+    This project uses publicly available full-text transcriptions of Agatha Christie’s short story collections: <strong>Hercule Poirot: The Complete Short Stories</strong> and <strong>Miss Marple: The Complete Short Stories</strong>, sourced from the Internet Archive.
   </p>
 
-  <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
 
     <!-- First Image -->
-    <div style="flex: 1 1 300px; max-width: 450px;">
-      <img src="WhatsApp Image 2025-06-20 at 10.25.49 (1).jpeg" alt="Data Preparation Image 1" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.2);" />
-    </div>
-
-    <!-- Second Image -->
-    <div style="flex: 1 1 300px; max-width: 450px;">
-      <img src="WhatsApp Image 2025-06-20 at 10.25.49.jpeg" alt="Data Preparation Image 2" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.2);" />
-    </div>
-
-  </div>
-</section>
+    <div style="flex: 1 1 320px; max-width: 460px; box-shadow: 0 12px 28px rgba(44, 62, 80, 0.12); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease;">
+      <img src="whatsapp3.jpeg" alt="Data Preparation Image 1" style="width: 100%; height: auto; display: block; object-fit: cover;" />
 <!-- Dataset Extraction Section -->
-<section style="padding: 3rem 2rem; font-family: 'Georgia', serif; background-color: #fefefe; color: #333; max-width: 1000px; margin: 0 auto;">
-  <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; color: #444;">Dataset Extraction</h2>
+<section style="padding: 3.5rem 2rem; font-family: 'Georgia', serif; background-color: #ffffff; color: #2c3e50; max-width: 1000px; margin: 2rem auto; border-radius: 16px; box-shadow: 0 12px 30px rgba(44, 62, 80, 0.1);">
+  <h2 style="font-size: 2.4rem; margin-bottom: 2rem; font-weight: 700; letter-spacing: 1px; text-align: center;">
+    Dataset Extraction
+  </h2>
   
-  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; justify-content: center;">
     
     <!-- Text Column -->
-    <div style="flex: 1 1 450px; min-width: 300px;">
-      <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+    <div style="flex: 1 1 480px; min-width: 320px; max-width: 540px; color: #34495e; line-height: 1.75; font-size: 1.15rem;">
+      <p style="margin-bottom: 1.2rem;">
         Since the focus is on the speech styles of Poirot and Marple, only their spoken lines were extracted. This was done with a custom Python script in Google Colab, using two steps:
       </p>
-      <ol style="font-size: 1.1rem; line-height: 1.7; margin-left: 1.2rem; margin-bottom: 1.5rem;">
-        <li>Extracting all text within quotation marks (assumed to be character speech) via regular expressions.</li>
-        <li>Filtering quotes by checking if the character’s name ("poirot" or "marple") appears nearby, to exclude other characters’ speech.</li>
+      <ol style="margin-left: 1.3rem; margin-bottom: 1.6rem; color: #2c3e50;">
+        <li style="margin-bottom: 0.8rem;">
+          Extracting all text within quotation marks (assumed to be character speech) via regular expressions.
+        </li>
+        <li>
+          Filtering quotes by checking if the character’s name (<em>"poirot"</em> or <em>"marple"</em>) appears nearby, to exclude other characters’ speech.
+        </li>
       </ol>
-      <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+      <p style="margin-bottom: 1.2rem;">
         The resulting quotes were saved into separate files for each character, forming the raw dataset. No further preprocessing (tokenization, lemmatization) was done at this stage.
       </p>
-      <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+      <p style="margin-bottom: 1.2rem;">
         The final dataset contains 3,894 quotes from Poirot and 670 from Marple. Although unbalanced, both provide enough material for stylistic analysis. All narrative and non-verbal content was excluded to focus purely on dialogue.
       </p>
-      <p style="font-size: 1.1rem; line-height: 1.7;">
+      <p>
         Limitations include possible omission of indirect or subtly attributed speech due to the filtering method. However, this approach is reproducible and scalable for extracting targeted dialogue from large literary corpora.
       </p>
     </div>
     
     <!-- Image Column -->
-    <div style="flex: 1 1 400px; min-width: 280px; display: flex; justify-content: center; align-items: center;">
-      <img src="Снимок экрана 2025-06-20 103437.png" alt="Dataset Extraction Screenshot" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.25);" />
+    <div style="flex: 1 1 380px; min-width: 280px; max-width: 420px; display: flex; justify-content: center; align-items: center;">
+      <img src="whatsapp1.jpeg" alt="Dataset Extraction Screenshot" style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 14px 30px rgba(44, 62, 80, 0.2);" />
     </div>
   
   </div>
