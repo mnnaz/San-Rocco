@@ -186,3 +186,36 @@
 
   </div>
 </section>
+<!-- Dataset Extraction Section -->
+<section style="padding: 3rem 2rem; font-family: 'Georgia', serif; background-color: #fefefe; color: #333; max-width: 1000px; margin: 0 auto;">
+  <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; color: #444;">Dataset Extraction</h2>
+  
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
+    
+    <!-- Text Column -->
+    <div style="flex: 1 1 450px; min-width: 300px;">
+      <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+        Since the focus is on the speech styles of Poirot and Marple, only their spoken lines were extracted. This was done with a custom Python script in Google Colab, using two steps:
+      </p>
+      <ol style="font-size: 1.1rem; line-height: 1.7; margin-left: 1.2rem; margin-bottom: 1.5rem;">
+        <li>Extracting all text within quotation marks (assumed to be character speech) via regular expressions.</li>
+        <li>Filtering quotes by checking if the character’s name ("poirot" or "marple") appears nearby, to exclude other characters’ speech.</li>
+      </ol>
+      <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+        The resulting quotes were saved into separate files for each character, forming the raw dataset. No further preprocessing (tokenization, lemmatization) was done at this stage.
+      </p>
+      <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+        The final dataset contains 3,894 quotes from Poirot and 670 from Marple. Although unbalanced, both provide enough material for stylistic analysis. All narrative and non-verbal content was excluded to focus purely on dialogue.
+      </p>
+      <p style="font-size: 1.1rem; line-height: 1.7;">
+        Limitations include possible omission of indirect or subtly attributed speech due to the filtering method. However, this approach is reproducible and scalable for extracting targeted dialogue from large literary corpora.
+      </p>
+    </div>
+    
+    <!-- Image Column -->
+    <div style="flex: 1 1 400px; min-width: 280px; display: flex; justify-content: center; align-items: center;">
+      <img src="Снимок экрана 2025-06-20 103437.png" alt="Dataset Extraction Screenshot" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.25);" />
+    </div>
+  
+  </div>
+</section>
