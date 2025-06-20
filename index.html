@@ -177,7 +177,39 @@
     <img src="assets/2 (1).jpeg" alt="Фото 2" style="max-width:320px; width:100%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.15);" />
   </div>
 </div>
+<div class="section" style="max-width:900px; margin: 40px auto; font-family: Arial, sans-serif; color: #333;">
+  <h2 style="font-size:28px; margin-bottom:15px; border-bottom:2px solid #ccc; padding-bottom:6px; color:#222;">Data Extraction</h2>
 
+  <div style="display:flex; align-items:flex-start; gap:30px; margin-top:20px;">
+    <div style="flex:1; font-size:18px; line-height:1.5; color:#444;">
+      <p>Since the focus is on the speech styles of Poirot and Marple, only their spoken lines were extracted. This was done with a custom Python script in Google Colab, using two steps:</p>
+      <ul style="margin-left:20px; color:#444;">
+        <li>Extracting all text within quotation marks (assumed to be character speech) via regular expressions.</li>
+        <li>Filtering quotes by checking if the character’s name ("poirot" or "marple") appears nearby, to exclude other characters’ speech.</li>
+      </ul>
+      <p>The resulting quotes were saved into separate files for each character, forming the raw dataset. No further preprocessing (tokenization, lemmatization) was done at this stage.</p>
+      <p>The final dataset contains 3,894 quotes from Poirot and 670 from Marple. Although unbalanced, both provide enough material for stylistic analysis. All narrative and non-verbal content was excluded to focus purely on dialogue.</p>
+    </div>
+
+    <div style="flex-shrink:0; max-width:320px;">
+      <img src="assets/3 (1).png" alt="Data Extraction" style="width:100%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.15);" />
+    </div>
+  </div>
+</div>
+<section style="max-width: 900px; margin: 4rem auto; font-family: 'Georgia', serif; color: #2c3e50; padding: 0 1rem;">
+
+  <!-- Заголовок раздела -->
+  <h2 style="
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(90deg, #2a4d69, #4b86b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  ">
     Method Comparison
   </h2>
 
@@ -253,35 +285,3 @@
     Each method builds on the others to offer a clear, data-driven portrait of Christie’s iconic detectives through their speech.
   </p>
 </section>
-<style>
-  .section {
-    margin-top: 60px;
-  }
-
-  .section h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-  }
-
-  .section p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-  }
-
-  .analysis-list {
-    margin-top: 15px;
-    padding-left: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-  }
-
-  .analysis-list li {
-    margin-bottom: 8px;
-    list-style-type: square;
-  }
-</style>
