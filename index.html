@@ -1,157 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>San Rocco Digital Archaeology QGIS Project</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Lora&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Christie Speech Style Analysis</title>
   <style>
-    body {
-      font-family: 'Lora', serif;
-      background-color: #f9f9f9;
+    body, html {
       margin: 0;
       padding: 0;
-      color: #34495E;
+      height: 100%;
+      font-family: 'Georgia', serif;
     }
 
-    .header {
-      background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4d/43/f2/trieste.jpg?w=1200&h=900&s=1');
+    .hero {
+      background-image: url('https://www.neeo.es/wp-content/uploads/2023/07/Agatha-Christie-Poirot-y-Miss-Marple.jpg');
       background-size: cover;
       background-position: center;
-      padding: 100px 20px;
-      text-align: center;
+      height: 100vh;
       color: white;
-    }
-
-    .main-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 4em;
-      margin: 0;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    }
-
-    .main-subtitle {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      font-size: 1.8em;
-      margin-top: 10px;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .section-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2em;
-      color: #2C3E50;
-      margin-top: 2em;
-      margin-bottom: 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      position: relative;
     }
 
-    .text-block {
-      font-size: 1.1em;
-      line-height: 1.7;
-      max-width: 800px;
-      margin: 0 auto 20px;
-      padding: 0 20px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
-    strong {
-      color: #2C3E50;
+    .title {
+      position: relative;
+      z-index: 2;
+      max-width: 80%;
+      font-size: 2.5rem;
+      line-height: 1.5;
+      padding: 1rem 2rem;
+      border: 2px solid white;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header class="header">
-    <h1 class="main-title">San Rocco</h1>
-    <h2 class="main-subtitle">Digital Archaeology QGIS Project</h2>
-  </header>
-
-  <h2 class="section-title">Archeological Background</h2>
-
-  <p class="text-block">
-    The <strong>San Rocco</strong> site, situated near Muggia Bay in the Trieste region, was the most important Roman military fortification in the area during the 2nd to 1st centuries B.C. Based on the typology of amphorae found there, its earliest occupation dates back to the late 3rd or early 2nd century B.C., likely linked to the Second Roman–Histrian War (178 B.C.).
-  </p>
-  <p class="text-block">
-    Featuring exceptionally wide ramparts measuring 20 to 25 meters and a regular internal layout reminiscent of military barracks, San Rocco closely resembles Roman camps from mid-2nd century B.C. Spain. The absence of a ditch and the use of turf, stones, and possibly timber in its walls indicate a temporary yet sturdy military installation. Its strategic location overlooking the Rosandra River and its proximity to a protected harbor support its identification as the main consular camp described by Livy. Due to its size—over 13 hectares—and defensive design, San Rocco is widely considered the probable site of the first Roman Tergeste mentioned by ancient sources like Strabo.
-  </p>
-
-  <h2 class="section-title">My Work Photo</h2>
-  <div style="text-align:center;">
-    <img src="assets/WhatsApp Image 2025-06-19 at 09.40.48.jpeg" alt="My Work Photo" style="width: 100%; max-width: 600px; border-radius: 10px;" />
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="title">
+      A Comparative Analysis of the Speech Styles of <br>
+      Hercule Poirot and Miss Marple in Agatha Christie's Novels <br>
+      Using Computational Linguistic Methods
+    </div>
   </div>
-
-  <h2 class="section-title">Digital Terrain Model Outputs</h2>
-  <p class="text-block">
-    After downloading and processing the Digital Terrain Models (DTMs) from eaglefvg.it, a series of visualizations was created to aid the archaeological interpretation of the San Rocco site and its surrounding area.
-  </p>
-  <div style="text-align:center;">
-    <img src="assets/WhatsApp Image 2025-06-19 at 09.41.14.jpeg" alt="Digital Terrain Model Output" style="width: 100%; max-width: 600px; border-radius: 10px;" />
-  </div>
-
 </body>
 </html>
-<h2 class="section-title">Feature Recognition through Visualisations</h2>
-<p class="text-block">
-  The visualisations generated from the downloaded DTMs enabled the detection of several archaeological features throughout the study area. However, some features noted in the original source paper—identified via aerial photogrammetry—were not clearly discernible in the current analysis. These features will be represented with thinner lines in the following visualisations.
-</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto 40px; padding: 0 20px; align-items: flex-start;">
-  <img src="assets/WhatsApp Image 2025-06-19 at 10.57.34.jpeg" alt="Feature Recognition Visualisation" style="flex: 1 1 400px; max-width: 100%; height: auto; border-radius: 10px;" />
-  <div style="flex: 1 1 450px; font-size: 1.05em; line-height: 1.5; color: #34495E; overflow-wrap: break-word;">
-    <ol>
-      <li><strong>Southeast External Rampart - Two segments:</strong>
-        <ul>
-          <li>1a: -60 m long, ~25 m wide</li>
-          <li>1b: -255 m long, ~20-25 m wide</li>
-        </ul>
-      </li>
-      <li><strong>Northeast External Rampart:</strong> -260 m long, ~20 m wide. Destroyed in part of the hill</li>
-      <li><strong>Square Central Fortification:</strong>
-        <ul>
-          <li>Sides: ~70 m long, 15 m wide, 1 m high</li>
-          <li>Orientation: ~50° from E-W</li>
-        </ul>
-      </li>
-      <li><strong>Transversal Rampart:</strong> -180 m long, 10 m wide, 1 m high</li>
-      <li><strong>Terrace Area - Substructures:</strong>
-        <ul>
-          <li>5a: Rectilinear wall following plateau</li>
-          <li>5b: Semicircular structure with shallow features</li>
-        </ul>
-      </li>
-      <li><strong>Additional Interior Walls:</strong>
-        <ul>
-          <li>6a: SW-NE wall, ~50 m x 2 m</li>
-          <li>6b: Perpendicular wall, -30 m x 2 m</li>
-        </ul>
-      </li>
-      <li><strong>Possible Further Defensive Structure:</strong> Rectilinear, to the north</li>
-      <li><strong>Northwest Semicircular Rampart:</strong>
-        <ul>
-          <li>8a: Extended Northeast External Rampart ~180 m northwards</li>
-          <li>8b: Curves southwards, enclosing ~13 ha</li>
-        </ul>
-      </li>
-      <li><strong>Rectangular structure:</strong> -40 × 35 m. Connecting/intersecting walls: 55 m and 155 m long</li>
-    </ol>
-  </div>
-</div>
-<h2 class="section-title">Topographic Profile</h2>
-
-<div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; gap: 20px; max-width: 800px; margin: 0 auto 40px; padding: 0 20px; align-items: flex-start;">
-  <img src="assets/WhatsApp Image 2025-06-19 at 09.40.48 (2).jpeg" alt="Topographic Profile" style="width: 320px; height: auto; border-radius: 10px;" />
-  <p style="flex: 1; font-size: 1.1em; line-height: 1.6; color: #34495E; white-space: pre-line; margin: 0;">
-    Helps visualise elevation changes and slope gradients of the hill. Essential to assess the strategic position and defensive potential of the site. Supports interpretation of archaeological features and site planning. Complements LiDAR visualizations by providing vertical context.
-  </p>
-</div>
-<h2 class="section-title">Personalised Map</h2>
-
-<div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; gap: 20px; max-width: 800px; margin: 0 auto 40px; padding: 0 20px; align-items: flex-start;">
-  <img src="assets/WhatsApp Image 2025-06-19 at 09.40.48 (3).jpeg" alt="Personalised Map" style="width: 320px; height: auto; border-radius: 10px;" />
-  <p style="flex: 1; font-size: 1.1em; line-height: 1.6; color: #34495E; white-space: pre-line; margin: 0;">
-    In the figures below, points labeled P1–P4 mark the locations where amphorae and pottery fragments were uncovered during field surveys. These artifacts, primarily dating from the late 3rd to the 1st century B.C., help to establish a chronological context for the identified structures and indicate site activity during the Roman Republican period.
-  </p>
-</div>
-<footer style="text-align: center; padding: 40px 20px; color: #2C3E50; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5em;">
-  Thank you
-</footer>
