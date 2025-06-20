@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Christie Speech Style Analysis</title>
+  <title>Poirot vs Marple Linguistic Analysis</title>
   <style>
     body, html {
       margin: 0;
@@ -30,25 +30,51 @@
       bottom: 0;
       right: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.55);
     }
 
-    .title {
+    .title-block {
       position: relative;
       z-index: 2;
-      max-width: 80%;
-      font-size: 2.5rem;
-      line-height: 1.5;
-      padding: 1rem 2rem;
-      border: 2px solid white;
-      border-radius: 12px;
+      padding: 2rem;
       backdrop-filter: blur(4px);
+      max-width: 90%;
+    }
+
+    .main-title {
+      font-size: 2.7rem;
+      font-weight: bold;
+      line-height: 1.5;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: 12px;
+      border: 2px solid #fff;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #ddd;
+      font-style: italic;
+    }
+
+    .author {
+      font-size: 1rem;
+      margin-top: 0.3rem;
+      color: #ccc;
+      letter-spacing: 1px;
     }
 
     @media (max-width: 768px) {
-      .title {
+      .main-title {
         font-size: 1.5rem;
         padding: 1rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .author {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -56,11 +82,55 @@
 <body>
   <div class="hero">
     <div class="overlay"></div>
-    <div class="title">
-      A Comparative Analysis of the Speech Styles of <br>
-      Hercule Poirot and Miss Marple in Agatha Christie's Novels <br>
-      Using Computational Linguistic Methods
+    <div class="title-block">
+      <div class="main-title">
+        A Comparative Analysis of the Speech Styles of<br>
+        Hercule Poirot and Miss Marple in Agatha Christie's Novels<br>
+        Using Computational Linguistic Methods
+      </div>
+      <div class="subtitle">An Introduction to Computational Social Science</div>
+      <div class="author">MYNGBOSSYN NAZERKE</div>
     </div>
   </div>
 </body>
 </html>
+<!-- Introduction Section -->
+<section style="padding: 4rem 2rem; font-family: 'Georgia', serif; background-color: #fefdfb; color: #2c2c2c;">
+  <h2 style="font-size: 2.4rem; text-align: center; margin-bottom: 1.5rem; color: #3e3e3e;">
+    Introduction
+  </h2>
+
+  <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto 2rem auto; line-height: 1.7;">
+    This project analyzes the fictional speech of Agatha Christie's two famous detectives — <strong>Hercule Poirot</strong> and <strong>Miss Marple</strong>.
+  </p>
+
+  <!-- Highlighted Question Block -->
+  <div style="
+    background-color: #fffbe6;
+    border-left: 6px solid #c49b14;
+    padding: 1.2rem 1.5rem;
+    margin: 2rem auto;
+    max-width: 880px;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  ">
+    <strong>The main question I explore is:</strong><br><br>
+    <span style="font-size: 1.2rem;">
+      How do their speech styles differ, and what do these differences reveal about their characters and roles in the narrative?
+    </span>
+  </div>
+
+  <!-- Main Description Text -->
+  <p style="font-size: 1.1rem; max-width: 900px; margin: 2rem auto 1.5rem auto; line-height: 1.8;">
+    I created a custom dataset using direct quotes from Christie’s novels and short stories where each character is the lead detective.
+    Using Python in Google Colab, I analyzed lexical frequency, sentence length, part-of-speech distribution, and discourse markers
+    (like <em>“dear,” “my friend,” “I think,” “perhaps”</em>). I also used named entity recognition and syntactic parsing to study
+    pronoun use and reference patterns.
+  </p>
+
+  <p style="font-size: 1.1rem; max-width: 900px; margin: 0 auto 1.5rem auto; line-height: 1.8;">
+    The project combines quantitative linguistic analysis with literary insights. It shows how Christie uses language to reflect each
+    character’s personality, background, and method of investigation — making them distinct and memorable.
+  </p>
+</section>
