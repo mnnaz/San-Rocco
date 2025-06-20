@@ -360,3 +360,47 @@
     Each analysis is supported by visualizations—such as bar charts, heatmaps, and co-occurrence graphs—generated in Python (Google Colab). These visuals highlight how specific linguistic patterns reflect the distinct narrative roles of Hercule Poirot and Miss Marple.
   </p>
 </section>
+<section style="max-width: 900px; margin: 4rem auto; font-family: 'Georgia', serif; color: #2c3e50; padding: 0 1rem;">
+
+  <!-- Заголовок -->
+  <h2 style="
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(90deg, #5d6d7e, #34495e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  ">
+    Corpus Compilation and Preprocessing
+  </h2>
+
+  <!-- Текст раздела -->
+  <p style="font-size: 1.15rem; line-height: 1.7; max-width: 720px; margin: 0 auto 1.2rem auto;">
+    Two corpora were created from full quotes and short stories featuring Hercule Poirot and Miss Marple. Using named entity recognition (NER) and custom speaker tagging, direct speech from each character was extracted, producing character-specific dialogue datasets.
+  </p>
+
+  <p style="font-size: 1.15rem; line-height: 1.7; max-width: 720px; margin: 0 auto 1.5rem auto;">
+    Preprocessing steps included:
+  </p>
+
+  <!-- Список шагов -->
+  <ul style="max-width: 720px; margin: 0 auto 2.5rem auto; font-size: 1.1rem; line-height: 1.6; padding-left: 1.3rem; color: #34495e;">
+    <li>Reading raw text files</li>
+    <li>Converting text to lowercase</li>
+    <li>Tokenizing into words</li>
+    <li>Removing stop words (e.g., “and,” “the”)</li>
+    <li>Filtering out non-alphabetic tokens (punctuation, numbers)</li>
+  </ul>
+
+  <p style="font-size: 1.15rem; line-height: 1.7; max-width: 720px; margin: 0 auto 2rem auto;">
+    Frequency distributions were calculated for each corpus, identifying the top 100 most frequent words combined for comparative analysis.
+  </p>
+
+  <!-- Изображение -->
+  <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+    <img src="assets/111.png" alt="Corpus frequency distribution visualization" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);" />
+  </div>
+</section>
